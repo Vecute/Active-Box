@@ -22,7 +22,6 @@ html {
 }
 .header__container::after {
     content: "";
-    display: inline-block;
     position: absolute;
     border-top: 1px solid #BABBC5;
     bottom: 0px;
