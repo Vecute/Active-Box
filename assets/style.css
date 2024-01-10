@@ -29,6 +29,7 @@ html {
     transform: translateX(-50%);
     max-width: 1170px;
     width: 100%;
+    z-index: 0;
 }
 .header__logo {
     display: flex;
@@ -47,13 +48,6 @@ html {
     list-style: none;
     flex: 1 1 auto;
 }
-.header__link:hover {
-    border-bottom: 3px solid #BABBC5;
-}
-.header__link:active {
-    color: #E71414;
-    border-bottom: 3px solid #E71414;
-}
 .header__link {
     text-decoration: none;
     color: #FFF;
@@ -63,8 +57,17 @@ html {
     line-height: 15px;
     text-transform: uppercase;
     display: block;
-    padding: 40px 0;
-    border-bottom: 3px solid #babbc500;
+    padding: 41px 0;
+    border-bottom: 3px solid #00000000;
+    position: relative;
+    z-index: 2;
+}
+.header__link:hover {
+    border-bottom: 3px solid #BABBC5;
+}
+.header__link:active {
+    color: #E71414;
+    border-bottom: 3px solid #E71414;
 }
 .main-container {
     max-width: 1200px;
