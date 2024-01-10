@@ -28,8 +28,7 @@ html {
     left: 50%;
     transform: translateX(-50%);
     max-width: 1170px;
-    width: 100%;
-    z-index: 0;
+    width: calc(100% - 30px);
 }
 .header__logo {
     display: flex;
@@ -146,7 +145,7 @@ html {
         max-width: 566px;
     }
     .header__container::after {
-        max-width: 984px;
+        width: calc(100% - 40px);
     }
     .banner {
         padding: 257px 0 126px;
