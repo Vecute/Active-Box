@@ -181,7 +181,8 @@ html {
         display: none;
     }
     .header__toggle-menu {
-        display: block;
+        display: flex;
+        align-items: center
     }
     .banner {
         padding: 106px 0 52px;
