@@ -60,6 +60,11 @@ body {
   display: flex;
 }
 
+.header__logo svg {
+  width: 184px;
+  height: 27px;
+}
+
 @media only screen and (width <= 767px) {
   .header__logo svg {
     width: 103.472px;
@@ -75,6 +80,11 @@ body {
 @media only screen and (width <= 1024px) {
   .header__nav {
     max-width: 566px;
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .header__nav {
     display: none;
   }
 }
