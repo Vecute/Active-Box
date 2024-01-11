@@ -68,7 +68,7 @@ body {
     }
     @media only screen and (max-width: 1024px) {
       display: none;
-     }
+    }
   }
 
   &__toggle-menu {
@@ -76,7 +76,6 @@ body {
     @media only screen and (max-width: 767px) {
       display: flex;
       align-items: center;
-      padding-right: 13px;
     }
   }
 
@@ -119,6 +118,9 @@ body {
   margin: 0 auto;
   @media only screen and (max-width: 1024px) {
     padding: 0 20px;
+  }
+  @media only screen and (max-width: 767px) {
+    padding-right: 35px;
   }
 }
 .banner {

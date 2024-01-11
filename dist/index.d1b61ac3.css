@@ -86,7 +86,6 @@ body {
 @media only screen and (width <= 767px) {
   .header__toggle-menu {
     align-items: center;
-    padding-right: 13px;
     display: flex;
   }
 }
@@ -139,6 +138,12 @@ body {
 @media only screen and (width <= 1024px) {
   .main-container {
     padding: 0 20px;
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .main-container {
+    padding-right: 35px;
   }
 }
 
