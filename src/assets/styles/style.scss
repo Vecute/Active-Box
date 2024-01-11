@@ -51,12 +51,11 @@ body {
 
   &__logo {
     display: flex;
-    
+
     & svg {
       @media only screen and (max-width: 767px) {
         width: 103.472px;
         height: 14.352px;
-        margin-right: -13px;
       }
     }
   }
@@ -67,13 +66,17 @@ body {
     @media only screen and (max-width: 1024px) {
      max-width: 566px;
     }
+    @media only screen and (max-width: 1024px) {
+      display: none;
+     }
   }
 
   &__toggle-menu {
     display: none;
     @media only screen and (max-width: 767px) {
       display: flex;
-      align-items: center
+      align-items: center;
+      padding-right: 13px;
     }
   }
 

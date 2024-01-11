@@ -64,7 +64,6 @@ body {
   .header__logo svg {
     width: 103.472px;
     height: 14.352px;
-    margin-right: -13px;
   }
 }
 
@@ -76,6 +75,7 @@ body {
 @media only screen and (width <= 1024px) {
   .header__nav {
     max-width: 566px;
+    display: none;
   }
 }
 
@@ -86,6 +86,7 @@ body {
 @media only screen and (width <= 767px) {
   .header__toggle-menu {
     align-items: center;
+    padding-right: 13px;
     display: flex;
   }
 }
