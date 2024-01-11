@@ -51,12 +51,12 @@ body {
 
   &__logo {
     display: flex;
+  }
 
-    & svg {
-      @media only screen and (max-width: 767px) {
-        width: 103.472px;
-        height: 14.352px;
-      }
+  &__logo svg {
+    @media only screen and (max-width: 767px) {
+      width: 103.472px;
+      height: 14.352px;
     }
   }
 
