@@ -12,6 +12,18 @@ body {
   font-family: Raleway, sans-serif;
 }
 
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media only screen and (width <= 1024px) {
+  .main-container {
+    padding: 0 20px;
+  }
+}
+
 .header {
   z-index: 1;
   width: 100%;
@@ -20,16 +32,21 @@ body {
   left: 0;
 }
 
+@media only screen and (width <= 767px) {
+  .header {
+    padding: 19px 0;
+  }
+}
+
 .header__container {
   justify-content: space-between;
   align-items: center;
-  height: 100px;
   display: flex;
 }
 
 @media only screen and (width <= 767px) {
   .header__container {
-    column-gap: calc(100% - 127px);
+    padding-right: 35px;
   }
 }
 
@@ -67,23 +84,11 @@ body {
 
 @media only screen and (width <= 767px) {
   .header__logo svg {
-    width: 103.472px;
-    height: 14.352px;
+    width: 100%;
+    max-width: 103.472px;
+    height: 100%;
   }
-}
 
-.header__nav {
-  width: 100%;
-  max-width: 670px;
-}
-
-@media only screen and (width <= 1024px) {
-  .header__nav {
-    max-width: 566px;
-  }
-}
-
-@media only screen and (width <= 767px) {
   .header__nav {
     display: none;
   }
@@ -121,6 +126,7 @@ body {
   text-transform: uppercase;
   z-index: 2;
   border-bottom: 3px solid #0000;
+  min-width: 134px;
   padding: 41px 0;
   font-size: 13px;
   font-weight: 700;
@@ -139,26 +145,20 @@ body {
   border-bottom: 3px solid #e71414;
 }
 
-.main-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
 @media only screen and (width <= 1024px) {
-  .main-container {
-    padding: 0 20px;
+  .header__link {
+    min-width: 112px;
   }
 }
 
-@media only screen and (width <= 767px) {
-  .main-container {
-    padding-right: 35px;
+@media only screen and (width <= 850px) {
+  .header__link {
+    min-width: 100px;
   }
 }
 
 .banner {
-  background: url("banner.1b129d93.jpg") center / cover;
+  background: url("banner.7d2a8d92.jpg") center / cover;
   margin: 0 auto;
   padding: 230px 0 120px;
   position: relative;
@@ -188,15 +188,8 @@ body {
 }
 
 .banner__container {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: relative;
-}
-
-.banner__info {
   text-align: center;
-  max-width: 100%;
+  position: relative;
 }
 
 .banner__title {
@@ -251,6 +244,7 @@ body {
 .button {
   color: #fff;
   text-transform: uppercase;
+  cursor: pointer;
   background-color: #ff4343;
   border: 1px solid #ff4343;
   width: 100%;
@@ -270,7 +264,7 @@ body {
 
 @media only screen and (width <= 767px) {
   .button {
-    max-width: 280px;
+    max-width: 100%;
     padding: 15px;
   }
 }
