@@ -1,0 +1,28 @@
+{
+  "name": "active-box",
+  "version": "1.0.0",
+  "description": "active-box project",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vecute/Active-Box.git"
+  },
+  "keywords": [
+    "scss",
+    "html",
+    "parcel"
+  ],
+  "author": "Gleb Khramtsov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vecute/Active-Box/issues"
+  },
+  "homepage": "https://github.com/Vecute/Active-Box#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
+    "parcel": "^2.11.0"
+  }
+}
