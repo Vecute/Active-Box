@@ -293,3 +293,92 @@ body {
     }
   }
 }
+
+.work {
+  margin-bottom: 116px;
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 80.11px;
+  }
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 34.85px;
+  }
+}
+
+.work__container {
+  display: grid;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2px;
+  @media only screen and (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+.project {
+  position: relative;
+  aspect-ratio: 378/340;
+
+  &__wrapper-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      opacity: 1;
+      background: $gradient-hover;
+    }
+    &:active {
+      opacity: 1;
+      background: $gradient-active;
+    }
+  }
+
+  &__title {
+    @include font($main-font-color, 24px, 900, 28px);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    @media only screen and (max-width: 1024px) {
+      margin-bottom: 24px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__description {
+    @include font($main-font-color, 18px, 400, 21px);
+    @media only screen and (max-width: 1024px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 0;
+    }
+  }
+}
