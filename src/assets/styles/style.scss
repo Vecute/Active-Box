@@ -307,11 +307,9 @@ body {
   margin: 0;
   padding: 0;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 2px;
   @media only screen and (max-width: 767px) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
   }
 }
 
