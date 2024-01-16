@@ -129,14 +129,16 @@ body {
   background: url(/src/assets/media/banner.jpg);
   background-size: cover;
   background-position: center;
-  margin: 0 auto;
+  margin: 0 auto 116px;
   position: relative;
   padding: 230px 0 120px;
   @media only screen and (max-width: 1024px) {
     padding: 257px 0 126px;
+    margin-bottom: 78px;
   }
   @media only screen and (max-width: 767px) {
     padding: 106px 0 52px;
+    margin-bottom: 40px;
   }
 
   &::before {
@@ -213,5 +215,81 @@ body {
   &:hover {
     background-color: $accent-color;
     border: 1px solid $accent-color;
+  }
+}
+
+.features {
+  margin-bottom: 116px;
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 80.11px;
+  }
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 34.85px;
+  }
+}
+
+.features__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 29px;
+  row-gap: 89px;
+  @media only screen and (max-width: 1024px) {
+    column-gap: 20px;
+    row-gap: 49px;
+  }
+  @media only screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    column-gap: 41.47px;
+  }
+}
+
+.feature {
+  text-align: center;
+
+  &__wrapper-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 29px;
+    @media only screen and (max-width: 1024px) {
+      margin-bottom: 24px;
+      width: 85px;
+      height: 85px;
+    }
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 21px;
+      width: 75px;
+      height: 75px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    @include font($feature-title-color, 24px, 900, 28px);
+    text-transform: uppercase;
+    margin-bottom: 20.43px;
+    @media only screen and (max-width: 1024px) {
+      margin-bottom: 3.95px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__description {
+    @include font($feature-description-color, 18px, 400, 21px);
+    @media only screen and (max-width: 1024px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 0;
+    }
   }
 }

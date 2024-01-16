@@ -159,19 +159,21 @@ body {
 
 .banner {
   background: url("banner.7d2a8d92.jpg") center / cover;
-  margin: 0 auto;
+  margin: 0 auto 116px;
   padding: 230px 0 120px;
   position: relative;
 }
 
 @media only screen and (width <= 1024px) {
   .banner {
+    margin-bottom: 78px;
     padding: 257px 0 126px;
   }
 }
 
 @media only screen and (width <= 767px) {
   .banner {
+    margin-bottom: 40px;
     padding: 106px 0 52px;
   }
 }
@@ -277,6 +279,113 @@ body {
 .button:hover {
   background-color: #e71414;
   border: 1px solid #e71414;
+}
+
+.features {
+  margin-bottom: 116px;
+}
+
+@media only screen and (width <= 1024px) {
+  .features {
+    margin-bottom: 80.11px;
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .features {
+    margin-bottom: 34.85px;
+  }
+}
+
+.features__container {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 89px 29px;
+  display: grid;
+}
+
+@media only screen and (width <= 1024px) {
+  .features__container {
+    gap: 49px 20px;
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .features__container {
+    flex-direction: column;
+    column-gap: 41.47px;
+    display: flex;
+  }
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature__wrapper-icon {
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 29px;
+  display: inline-flex;
+}
+
+@media only screen and (width <= 1024px) {
+  .feature__wrapper-icon {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 24px;
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .feature__wrapper-icon {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 21px;
+  }
+}
+
+.feature__wrapper-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.feature__title {
+  color: #2d3033;
+  text-transform: uppercase;
+  margin-bottom: 20.43px;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 28px;
+}
+
+@media only screen and (width <= 1024px) {
+  .feature__title {
+    margin-bottom: 3.95px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+.feature__description {
+  color: #6c7279;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+@media only screen and (width <= 1024px) {
+  .feature__description {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .feature__description {
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=index.d1b61ac3.css.map */
