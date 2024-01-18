@@ -92,6 +92,7 @@ body {
           background-size: cover;
           background-position: center;
           padding: 107px 20px;
+          visibility: visible;
         }
 
         .header__nav-list::before {
@@ -121,6 +122,7 @@ body {
     &-list {
       display: flex;
       @media only screen and (max-width: 767px) {
+        visibility: hidden;
         right: -500px;
         position: absolute;
         transition: right .3s linear;
