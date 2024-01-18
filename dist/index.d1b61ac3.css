@@ -497,6 +497,83 @@ body {
   }
 }
 
+.download {
+  margin: 0 auto 116px;
+}
+
+@media only screen and (width <= 1024px) {
+  .download {
+    margin-bottom: 78px;
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .download {
+    margin-bottom: 45px;
+  }
+}
+
+.download__container {
+  text-align: center;
+}
+
+.download__text {
+  color: #000;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 35px;
+}
+
+@media only screen and (width <= 1024px) {
+  .download__text {
+    margin-bottom: 22px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .download__text {
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+.download__description {
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 47.71px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+@media only screen and (width <= 1024px) {
+  .download__description {
+    margin-bottom: 43.29px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .download__description {
+    margin-bottom: 11px;
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+@media only screen and (width <= 1024px) {
+  .download__button {
+    padding: 29px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
 .footer {
   text-align: center;
 }

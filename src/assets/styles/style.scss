@@ -377,6 +377,59 @@ body {
   }
 }
 
+.download {
+  margin: 0 auto 116px;
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 78px;
+  }
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 45px;
+  }
+  
+  &__container {
+    text-align: center;
+  }
+  
+  &__text {
+    @include font($download-color, 30px, 500, 35px);
+    margin-bottom: 30px;
+    @media only screen and (max-width: 1024px) {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 22px;
+    }
+    @media only screen and (max-width: 767px) {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 25px;
+    }
+  }
+  
+  &__description {
+    @include font($download-color, 18px, 700, 21px);
+    margin-bottom: 47.71px;
+    text-transform: uppercase;
+    @media only screen and (max-width: 1024px) {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 43.29px;
+    }
+    @media only screen and (max-width: 767px) {
+      font-size: 13px;
+      line-height: 15px;
+      margin-bottom: 11px;
+    }
+  }
+
+  &__button {
+    @media only screen and (max-width: 1024px) {
+      font-size: 18px;
+      line-height: 21px;
+      padding: 29px;
+    }
+  }
+}
+
 .footer {
   text-align: center;
 
