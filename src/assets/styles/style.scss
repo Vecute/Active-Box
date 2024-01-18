@@ -121,7 +121,7 @@ body {
     &-list {
       display: flex;
       @media only screen and (max-width: 767px) {
-        right: -100%;
+        right: -500px;
         position: absolute;
         transition: right .3s linear;
       }
