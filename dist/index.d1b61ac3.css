@@ -580,8 +580,8 @@ body {
 .member__wrapper-image {
   justify-content: center;
   align-items: center;
-  width: 270px;
-  height: 270px;
+  max-width: 270px;
+  max-height: 270px;
   margin-bottom: 30px;
   display: flex;
   overflow: hidden;
@@ -589,16 +589,16 @@ body {
 
 @media only screen and (width <= 1024px) {
   .member__wrapper-image {
-    width: 227px;
-    height: 227px;
+    max-width: 227px;
+    max-height: 227px;
     margin-bottom: 25.23px;
   }
 }
 
 @media only screen and (width <= 767px) {
   .member__wrapper-image {
-    width: 280px;
-    height: 227.254px;
+    max-width: 280px;
+    max-height: 227.254px;
     margin-bottom: 25.25px;
   }
 }

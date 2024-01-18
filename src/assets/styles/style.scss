@@ -439,18 +439,18 @@ body {
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      width: 270px;
-      height: 270px;
+      max-width: 270px;
+      max-height: 270px;
       margin-bottom: 30px;
       @media only screen and (max-width: 1024px) {
         margin-bottom: 25.23px;
-        width: 227px;
-        height: 227px;
+        max-width: 227px;
+        max-height: 227px;
       }
       @media only screen and (max-width: 767px) {
         margin-bottom: 25.25px;
-        width: 280px;
-        height: 227.254px;
+        max-width: 280px;
+        max-height: 227.254px;
       }
     }
     &__image {
