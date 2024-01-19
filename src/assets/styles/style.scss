@@ -8,6 +8,7 @@ html {
 
 body {
   font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
 }
 
 .main-container {
@@ -27,9 +28,16 @@ body {
   z-index: 1;
   &.scrolled {
     background-color: $background-color;
+    .header__container::after {
+      width: 0;
+    }
+    .header__link {
+      padding: 20px 0;
+    }
+  
   }
   @media only screen and (max-width: 767px) {
-    padding: 19px 0;
+    padding: 20px 0;
   }
 
   &__container {
@@ -75,55 +83,35 @@ body {
 
   &__nav {
     @media only screen and (max-width: 767px) {
-      &.open {
-        display: flex;
+      position: fixed;
+      background: url(/src/assets/media/banner.jpg) center / cover;
+      width: 100%;
+      height: 100vh;
+      padding: 107px 20px;
+      top: 0;
+      left: 100%;
+      transition: left .3s linear;
+      z-index: 1;
+
+      &:before {
+        content: "";
+        position: absolute;
         top: 0;
         left: 0;
-        .header__nav-list {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          position: fixed;
-          top: 0;
-          right: 0;
-          flex-direction: column;
-          z-index: 1;
-          background: url(/src/assets/media/banner.jpg);
-          background-size: cover;
-          background-position: center;
-          padding: 107px 20px;
-        }
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        background-color: $background-color;
+      }
 
-        .header__nav-list::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          opacity: 0.8;
-          background-color: $background-color;
-        }
-        .header__list-item {
-          margin-bottom: 49px;
-          flex-grow: 0;
-        }
-
-        .header__link {
-          text-align: left;
-          padding: 0;
-          line-height: 15px;
-          font-size: 13px;
-          border: none;
-        }
+      &.open {
+        left: 0%;
       }
     }
     &-list {
       display: flex;
       @media only screen and (max-width: 767px) {
-        position: absolute;
-        right: -500px;
-        transition: right .1s linear;
+        flex-direction: column;
       }
     }
   }
@@ -186,11 +174,14 @@ body {
     width: 100%;
     transition: all .3s linear;
   }
-  
 
   &__list-item {
+    flex: auto;
     list-style: none;
-    flex: 1 1 auto;
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 49px;
+      flex-grow: 0;
+    }
   }
 
   &__link {
@@ -199,11 +190,26 @@ body {
     text-align: center;
     text-transform: uppercase;
     display: block;
-    padding: 41px 0;
+    padding: 43px 0 40px;
     border-bottom: 3px solid $hidden-line-color;
     position: relative;
     z-index: 2;
     min-width: 134px;
+    @media only screen and (max-width: 1024px) {
+      min-width: 111.8px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+    @media only screen and (max-width: 850px) {
+      min-width: 100px;
+    }
+    @media only screen and (max-width: 767px) {
+      text-align: left;
+      border: none;
+      padding: 0;
+      font-size: 13px;
+      line-height: 15px;
+    }
 
     &:hover {
       border-bottom: 3px solid $line-color;
@@ -213,13 +219,6 @@ body {
     &:active {
       color: $active-color;
       border-bottom: 3px solid $active-color;
-    }
-
-    @media only screen and (max-width: 1024px) {
-      min-width: 112px;
-    }
-    @media only screen and (max-width: 850px) {
-      min-width: 100px;
     }
   }
 }
@@ -268,7 +267,7 @@ body {
     @media only screen and (max-width: 767px) {
       font-size: 36px;
       line-height: 42px;
-      margin-bottom: 32.71px;
+      margin-bottom: 33px;
     }
   }
   
@@ -282,7 +281,7 @@ body {
     }
     @media only screen and (max-width: 767px) {
       font-size: 14px;
-      line-height: 16.44px;
+      line-height: 16px;
       margin-bottom: 49.29px;
     }
   }
@@ -297,6 +296,7 @@ body {
   width: 100%;
   padding: 25px;
   cursor: pointer;
+  transition: all .3s linear;
   @media only screen and (max-width: 1024px) {
     max-width: 314px;
     padding: 25px;
@@ -314,17 +314,16 @@ body {
   &:hover {
     background-color: $active-color;
     border: 1px solid $active-color;
-    transition: all .1s linear;
   }
 }
 
 .features {
-  margin-bottom: 116px;
+  margin-bottom: 134px;
   @media only screen and (max-width: 1024px) {
-    margin-bottom: 80.11px;
+    margin-bottom: 81px;
   }
   @media only screen and (max-width: 767px) {
-    margin-bottom: 34.85px;
+    margin-bottom: 37px;
   }
 }
 
@@ -332,7 +331,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 31px;
-  row-gap: 89px;
+  row-gap: 87px;
   @media only screen and (max-width: 1024px) {
     column-gap: 20px;
     row-gap: 49px;
@@ -340,7 +339,7 @@ body {
   @media only screen and (max-width: 767px) {
     display: flex;
     flex-direction: column;
-    row-gap: 41.47px;
+    row-gap: 43px;
   }
 }
 
@@ -355,12 +354,12 @@ body {
     height: 100px;
     margin-bottom: 51px;
     @media only screen and (max-width: 1024px) {
-      margin-bottom: 24px;
+      margin-bottom: 43.5px;
       width: 85px;
       height: 85px;
     }
     @media only screen and (max-width: 767px) {
-      margin-bottom: 21px;
+      margin-bottom: 37px;
       width: 75px;
       height: 75px;
     }
@@ -372,13 +371,16 @@ body {
   }
 
   &__title {
-    @include font($title-color, 18px, 400, 21px);
+    @include font($title-color, 24px, 900, 29px);
     text-transform: uppercase;
     margin-bottom: 43px;
     @media only screen and (max-width: 1024px) {
-      margin-bottom: 3.95px;
+      margin-bottom: 24px;
       font-size: 18px;
       line-height: 21px;
+    }
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 8px;
     }
   }
 
@@ -392,29 +394,24 @@ body {
 }
 
 .work {
-  margin-bottom: 116px;
-  @media only screen and (max-width: 1024px) {
-    margin-bottom: 80.11px;
-  }
-  @media only screen and (max-width: 767px) {
-    margin-bottom: 34.85px;
-  }
-}
-
-.work__container {
   display: grid;
   max-width: 100%;
   padding: 0;
   grid-template-columns: repeat(4, 1fr);
   gap: 2px;
+  margin-bottom: 116px;
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 80.11px;
+  }
   @media only screen and (max-width: 767px) {
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 34.85px;
   }
 }
 
 .project {
   position: relative;
-  aspect-ratio: 378/340;
+  aspect-ratio: 378/338;
 
   &__wrapper-image {
     position: absolute;
@@ -422,12 +419,13 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
   }
 
   &__image {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   &__info {
@@ -441,10 +439,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all .3s linear;
+    cursor: pointer;
     &:hover {
       opacity: 1;
       background: $gradient-hover;
-      transition: all .3s linear;
     }
     &:active {
       opacity: 1;
@@ -480,7 +479,7 @@ body {
 
 .social {
   display: flex;
-  column-gap: 6px;
+  column-gap: 5.5px;
   @media only screen and (max-width: 1024px) {
     column-gap: 5.05px;
   }
@@ -494,6 +493,8 @@ body {
     justify-content: center;
     width: 39px;
     height: 39px;
+    border: 1px solid $border-cions-color;
+    transition: all .3s linear;
     @media only screen and (max-width: 1024px) {
       width: 32.8px;
       height: 32.8px;
@@ -502,13 +503,24 @@ body {
       width: 39.6px;
       height: 39.6px;
     }
+    &:hover {
+      border: 1px solid $accent-color;
+      path {
+        fill: $accent-color;
+      }
+    }
+
+    &:active {
+      border: 1px solid $active-color;
+      path {
+        fill: $active-color;
+      }
+    }
   
     svg {
       width: 100%;
       height: 100%;
-
-      &:hover path {
-        fill: $accent-color;
+      path {
         transition: all .3s linear;
       }
     }
@@ -516,7 +528,7 @@ body {
 }
 
 .team {
-  margin-bottom: 114px;
+  margin-bottom: 782px;
   @media only screen and (max-width: 1024px) {
     margin-bottom: 78.41px;
   }
@@ -535,7 +547,7 @@ body {
   @media only screen and (max-width: 767px) {
     display: flex;
     flex-direction: column;
-    row-gap: 49.39px;
+    row-gap: 49px;
   }
 }
 
@@ -545,22 +557,20 @@ body {
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      max-width: 270px;
-      max-height: 270px;
+      aspect-ratio: 1/1;
       margin-bottom: 30px;
       @media only screen and (max-width: 1024px) {
-        margin-bottom: 25.23px;
-        max-width: 227px;
-        max-height: 227px;
+        margin-bottom: 27px;
+        aspect-ratio: 1/1;
       }
       @media only screen and (max-width: 767px) {
-        margin-bottom: 25.25px;
-        max-width: 280px;
-        max-height: 227.254px;
+        margin-bottom: 28px;
+        aspect-ratio: 280/227;
       }
     }
     &__image {
       object-fit: cover;
+      object-position: center;
       width: 100%;
       height: 100%;
     }
@@ -568,8 +578,9 @@ body {
     &__name {
       @include font($title-color, 24px, 700, 28px);
       margin-bottom: 5.29px;
+      text-transform: capitalize;
       @media only screen and (max-width: 1024px) {
-        margin-bottom: 4.6px;
+        margin-bottom: 7px;
         font-size: 18px;
         line-height: 21px;
       }
@@ -591,7 +602,7 @@ body {
 
     &__description {
       @include font($description-color, 18px, 400, 21px);
-      margin-bottom: 37.86px;
+      margin-bottom: 38px;
       @media only screen and (max-width: 1024px) {
         margin-bottom: 39.2px;
         font-size: 14px;
@@ -604,9 +615,9 @@ body {
 }
 
 .download {
-  margin: 0 auto 116px;
+  margin: 0 auto 113.5px;
   @media only screen and (max-width: 1024px) {
-    margin-bottom: 78px;
+    margin-bottom: 76px;
   }
   @media only screen and (max-width: 767px) {
     margin-bottom: 45px;
@@ -618,7 +629,7 @@ body {
   
   &__text {
     @include font($download-color, 30px, 500, 35px);
-    margin-bottom: 30px;
+    margin-bottom: 23px;
     @media only screen and (max-width: 1024px) {
       font-size: 24px;
       line-height: 28px;
@@ -627,13 +638,13 @@ body {
     @media only screen and (max-width: 767px) {
       font-size: 18px;
       line-height: 21px;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
     }
   }
   
   &__description {
     @include font($download-color, 18px, 700, 21px);
-    margin-bottom: 47.71px;
+    margin-bottom: 48px;
     text-transform: uppercase;
     @media only screen and (max-width: 1024px) {
       font-size: 14px;
@@ -661,20 +672,24 @@ body {
 
   &__wrapper-info {
     background-color: #353C65;
+    padding: 70px 0;
+    @media only screen and (max-width: 1024px) {
+      padding: 46.59px 0 41.19px;
+    }
+    @media only screen and (max-width: 767px) {
+      padding: 34.14px 0;
+    }
   }
 
   &__info {
-    padding: 71px 15px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
     @media only screen and (max-width: 1024px) {
-      padding: 46.59px 20px 41.19px;
       column-gap: 20px;
     }
     @media only screen and (max-width: 767px) {
       display: block;
-      padding: 34.14px 20px;
     }
   }
 
@@ -693,7 +708,7 @@ body {
         margin-bottom: 17.72px;
       }
       @media only screen and (max-width: 767px) {
-        margin-bottom: 34px;
+        margin-bottom: 33px;
       }
     }
   
@@ -774,21 +789,23 @@ body {
 
   &__wrapper-copy {
     background-color: #2C3154;
+    padding: 24px 0;
+    @media only screen and (max-width: 1024px) {
+      padding: 14px 0 15px;
+    }
+    @media only screen and (max-width: 767px) {
+      padding: 29.86px 0 28.14px;
+    }
   }
 
   &__copy {
-    padding: 24px 15px;
     @include font($footer-secondary-color, 18px, 400, 21px);
     max-width: 400px;
     @media only screen and (max-width: 1024px) {
       font-size: 14px;
       line-height: 16px;
-      padding: 14.28px 20px 14.43px;
     }
-    @media only screen and (max-width: 767px) {
-      padding: 29.86px 20px 28.14px;
-    }
-
+    
     &-highlight {
       color: $main-font-color;
     }
