@@ -179,7 +179,7 @@ body {
     flex: auto;
     list-style: none;
     @media only screen and (max-width: 767px) {
-      margin-bottom: 49px;
+      margin-bottom: 44px;
       flex-grow: 0;
     }
   }
@@ -205,10 +205,11 @@ body {
     }
     @media only screen and (max-width: 767px) {
       text-align: left;
-      border: none;
-      padding: 0;
+      padding-bottom: 5px;
       font-size: 13px;
       line-height: 15px;
+      border-bottom: 3px solid transparent;
+      display: inline;
     }
 
     &:hover {
@@ -319,6 +320,7 @@ body {
 
 .features {
   margin-bottom: 134px;
+  scroll-margin-top: 57px;
   @media only screen and (max-width: 1024px) {
     margin-bottom: 81px;
   }
@@ -400,6 +402,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 2px;
   margin-bottom: 116px;
+  scroll-margin-top: 57px;
   @media only screen and (max-width: 1024px) {
     margin-bottom: 80.11px;
   }
@@ -525,6 +528,7 @@ body {
 
 .team {
   margin-bottom: 114px;
+  scroll-margin-top: 57px;
   @media only screen and (max-width: 1024px) {
     margin-bottom: 78.41px;
   }
@@ -612,6 +616,7 @@ body {
 
 .download {
   margin: 0 auto 113.5px;
+  scroll-margin-top: 57px;
   @media only screen and (max-width: 1024px) {
     margin-bottom: 76px;
   }
