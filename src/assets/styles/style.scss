@@ -185,6 +185,7 @@ body {
   }
 
   &__link {
+    transition: all .3s linear;
     @include font($main-font-color, 13px, 700, 15px);
     text-decoration: none;
     text-align: center;
@@ -214,7 +215,6 @@ body {
 
     &:hover {
       border-bottom: 3px solid $line-color;
-      transition: all .3s linear;
     }
   
     &:active {
@@ -273,6 +273,9 @@ body {
   }
   
   &__description {
+    width: 100%;
+    max-width: 1000px;
+    display: inline-block;
     @include font($main-font-color, 24px, 400, 28px);
     margin-bottom: 79.57px;
     @media only screen and (max-width: 1024px) {
@@ -284,6 +287,7 @@ body {
       font-size: 14px;
       line-height: 16px;
       margin-bottom: 49.29px;
+      max-width: 1000px;
     }
   }
 }
@@ -339,8 +343,7 @@ body {
     row-gap: 49px;
   }
   @media only screen and (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
     row-gap: 43px;
   }
 }
@@ -545,9 +548,8 @@ body {
     column-gap: 25px;
   }
   @media only screen and (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
     row-gap: 49px;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -690,7 +692,7 @@ body {
       column-gap: 20px;
     }
     @media only screen and (max-width: 767px) {
-      display: block;
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
