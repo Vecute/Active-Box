@@ -707,11 +707,20 @@ body {
   background: none;
   opacity: 1;
   margin: 0 12.5px;
+  transition: all 0.2s linear;
   @media only screen and (max-width: 1024px) {
     width: 9.488px;
     height: 9.488px;
   }
+  &:hover {
+    border: 1px solid $testimonials-background-color;
+  }
+  &:active {
+    background: $testimonials-background-color;
+  }
 }
+
+
 
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 12.5px;
