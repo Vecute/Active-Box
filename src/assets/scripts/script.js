@@ -47,3 +47,11 @@
             menu.classList.remove('open');
             menuButton.classList.remove('open');
         }
+
+        // Swiper
+        var swiper = new Swiper(".testimonials__swiper", {
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          }
+        });
