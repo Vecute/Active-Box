@@ -25,7 +25,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   &.scrolled {
     background-color: $background-color;
     .header__container::after {
@@ -331,20 +331,20 @@ body {
   @media only screen and (max-width: 767px) {
     margin-bottom: 37px;
   }
-}
 
-.features__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 31px;
-  row-gap: 87px;
-  @media only screen and (max-width: 1024px) {
-    column-gap: 20px;
-    row-gap: 49px;
-  }
-  @media only screen and (max-width: 767px) {
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 43px;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 31px;
+    row-gap: 87px;
+    @media only screen and (max-width: 1024px) {
+      column-gap: 20px;
+      row-gap: 49px;
+    }
+    @media only screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 43px;
+    }
   }
 }
 
@@ -538,18 +538,18 @@ body {
   @media only screen and (max-width: 767px) {
     margin-bottom: 34.39px;
   }
-}
 
-.team__container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 30px;
-  @media only screen and (max-width: 1024px) {
-    column-gap: 25px;
-  }
-  @media only screen and (max-width: 767px) {
-    row-gap: 49px;
-    grid-template-columns: repeat(1, 1fr);
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    @media only screen and (max-width: 1024px) {
+      column-gap: 25px;
+    }
+    @media only screen and (max-width: 767px) {
+      row-gap: 49px;
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
 
@@ -614,6 +614,125 @@ body {
         margin-bottom: 55.15px;
       }
     }
+}
+.testimonials {
+  scroll-margin-top: 57px;
+  margin-bottom: 120px;
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 82px;
+  }
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 41px;
+  }
+  &__swiper {
+    &-wrapper {
+      margin-bottom: 57px;
+      @media only screen and (max-width: 1024px) {
+        margin-bottom: 45px;
+      }
+    }
+  }
+  &__slide {
+    background-color: $testimonials-background-color;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    @media only screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__wrapper-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    @media only screen and (max-width: 767px) {
+      aspect-ratio: 4 / 2.65;
+    }
+  }
+
+  &__slide-info {
+    padding: 134px 170px 122px 114px;
+    @media only screen and (max-width: 1024px) {
+      padding: 62px 133px 112px 78px;
+    }
+    @media only screen and (max-width: 850px) {
+      padding: 62px;
+    }
+    @media only screen and (max-width: 767px) {
+      padding: 24px 25px 100px 20px;
+    }
+  }
+
+  &__slide-quote {
+    @include font($main-font-color, 36px, 400, 49px);
+    text-transform: capitalize;
+    font-style: italic;
+    font-family: "Cardo", serif;
+    margin-bottom: 24px;
+    @media only screen and (max-width: 1024px) {
+      @include font($main-font-color, 24px, 400, 32px);
+      margin-bottom: 16px;
+    }
+    @media only screen and (max-width: 767px) {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__slide-person {
+    @include font($main-font-color, 13px, 700, 15px);
+    text-transform: uppercase;
+    @media only screen and (max-width: 1024px) {
+      @include font($main-font-color, 12px, 700, 14px);
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  border-radius: 14px;
+  border: 1px solid $testimonials-btn-color;
+  width: 14px;
+  height: 14px;
+  background: none;
+  opacity: 1;
+  margin: 0 12.5px;
+  transition: all 0.2s linear;
+  @media only screen and (max-width: 1024px) {
+    width: 9.488px;
+    height: 9.488px;
+  }
+  &:hover {
+    border: 1px solid $accent-color;
+    background: $accent-color;
+  }
+  &:active {
+    background: $testimonials-background-color;
+  }
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 12.5px;
+  @media only screen and (max-width: 767px) {
+    margin: 0 10.4px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: $testimonials-btn-color;
+  border: 1px solid $testimonials-btn-color
 }
 
 .download {
