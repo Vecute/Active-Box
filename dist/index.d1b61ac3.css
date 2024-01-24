@@ -854,6 +854,7 @@ body {
   object-position: center;
   width: 100%;
   height: 100%;
+  position: absolute;
   top: 0;
   left: 0;
 }
@@ -950,7 +951,8 @@ body {
 }
 
 .swiper-pagination-bullet:hover {
-  border: 1px solid #5c3249;
+  background: #ff4343;
+  border: 1px solid #ff4343;
 }
 
 .swiper-pagination-bullet:active {
