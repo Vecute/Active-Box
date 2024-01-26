@@ -716,11 +716,12 @@ body {
     height: 9.488px;
   }
   &:hover {
-    border: 1px solid $accent-color;
-    background: $accent-color;
+    border: 1px solid $testimonials-light-color;
+    background: $testimonials-light-color;
   }
   &:active {
     background: $testimonials-background-color;
+    border: 1px solid $testimonials-background-color;
   }
 }
 

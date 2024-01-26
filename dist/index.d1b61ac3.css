@@ -952,12 +952,13 @@ body {
 }
 
 .swiper-pagination-bullet:hover {
-  background: #ff4343;
-  border: 1px solid #ff4343;
+  background: #7e5d6f83;
+  border: 1px solid #7e5d6f83;
 }
 
 .swiper-pagination-bullet:active {
   background: #5c3249;
+  border: 1px solid #5c3249;
 }
 
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
