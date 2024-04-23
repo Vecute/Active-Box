@@ -765,10 +765,16 @@ body {
   line-height: 21px;
 }
 
+@media only screen and (width <= 1070px) {
+  .member__position {
+    font-size: 16px;
+  }
+}
+
 @media only screen and (width <= 1024px) {
   .member__position {
     margin-bottom: 22.45px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 16px;
   }
 }
